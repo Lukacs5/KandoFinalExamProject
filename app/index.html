@@ -1,0 +1,233 @@
+/*tartalmazza a css-is*/
+<!DOCTYPE html>
+
+<head>
+  <title>záróvizsga</title>
+  <meta charset="UTF-8">
+  <meta name="content-language" content="hu, hun, hungarian">
+  <style>
+    body {
+      margin: 0px;
+      /*body margot 0 ra állítom így kitölti a teljes oldalt */
+      font-family: sans-serif;
+      /*betűtípust állítok*/
+
+    }
+
+    h1 {
+      margin: 15px;
+    }
+
+    /*15 pixeles margot adok a h1 nek*/
+    label {
+      color: white;
+      /*checkbox színét fehérre állítom*/
+    }
+
+    .container {
+      text-align: center;
+      /* a szöveget középre igazítás*/
+      margin: 0 auto;
+      /*az alsó és felső margot 0 ra állítom a jobb,balt pedig autora így a tartalom középre kerül*/
+      width: 100%;
+      /*az oldal teljes szélességét töltse ki */
+      background-color: rgba(0, 0, 0, 0.10);
+      /*10 százalékot sötétítek rajta*/
+      display: grid;
+      /*felosztom a container divet*/
+      column-gap: 10px;
+      /*soronként és oszloponként is hagyon ki 10px  helyet*/
+      row-gap: 10px;
+      grid-template-rows: repeat(4, 1fr);
+      /*4 sort állítok be*/
+      grid-template-columns: repeat(5, 1fr);
+      /*5 oszlopot állíttok be*/
+    }
+
+    .container div {
+      padding: 50px;
+      /*container div eknek 50px körülvevő tartomány */
+    }
+
+    .d0 {
+      background-color: red;
+      /*beállítom a háttér színét*/
+      grid-row-start: 3;
+      /*3 sortól a 6 os soris sírig tart*/
+      grid-row-end: 6;
+      grid-column-start: 1;
+      /*1 oszlopnál kezdődik és 2nál végződik*/
+      grid-column-end: 2;
+    }
+
+    .d1 {
+      background-color: #3D9900;
+      grid-row-start: 1;
+      grid-row-end: 6;
+      grid-column-start: 2;
+      grid-column-end: 2;
+    }
+
+    .d2 {
+      background-color: rgb(1, 66, 109);
+      grid-row-start: 5;
+      grid-row-end: 5;
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+
+    .d3 {
+      background-color: orange;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+
+    .d4 {
+      background-color: rgb(0, 136, 95);
+      grid-row-start: 2;
+      grid-row-end: 5;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+    .d5 {
+      background-color: rgb(46, 213, 255);
+      grid-row-start: 2;
+      grid-row-end: 5;
+      grid-column-start: 5;
+      grid-column-end: 6;
+    }
+
+    .d6 {
+      background-color: purple;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+
+    @media (max-width: 775px) {
+
+      /*ha a média elem kisebb mint 775px akkor alkalmazza a lentebb leírtakat*/
+      .d0 {
+        /*legyen teljes széles a grid, és egy oszlopot foglaljon el */
+        grid-row-start: 7;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d1 {
+        grid-row-start: 6;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d2 {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d3 {
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d4 {
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d5 {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      .d6 {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      /* dark mode bekapcsolásáért felelős média elem css ben */
+      body {
+        color: white;
+        background-color: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="mymain">
+    <h1>Control LED light a house lighting setting</h1><!--itt adom meg a címsort-->
+
+
+
+
+    <div class="container">
+      <div class="d0"> <input type="checkbox" id="light0"> <label for="light0">GPIO4 mosdó,mellékhelyiség</label> </div>
+      <!--egy divben létrehozok a checkbox annak adok egy idt-->
+      <div class="d1"> <input type="checkbox" id="light1"> <label for="light1">GPIO17 folyosó</label> </div>
+      <!--létrehozok neki egy szöveget és hozzáadom a tulajdonságot hogy -->
+      <div class="d2"> <input type="checkbox" id="light2"> <label for="light2">GPIO18 konyha</label> </div>
+      <!--ezáltal is bekapcsolható legyen a négyzet-->
+      <div class="d3"> <input type="checkbox" id="light3"> <label for="light3">GPIO27 gyerekek szobája</label> </div>
+      <div class="d4"> <input type="checkbox" id="light4"> <label for="light4">GPIO22 nappali</label> </div>
+      <div class="d5"> <input type="checkbox" id="light5"> <label for="light5">GPIO23 hálószoba</label> </div>
+      <div class="d6"> <input type="checkbox" id="light6"> <label for="light6">GPIO24 bejárati rész</label> </div>
+    </div>
+
+
+  </main>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js">//egy külsö socket.io cliens meghivása</script>
+
+
+  <script>
+    var socket = io(); // betölti a socket.io-klienst, és csatlakozzon az oldalt kiszolgáló szerver hez
+
+
+    function lightyvalue(lightx) {
+
+      window.addEventListener("load", function () { //ed egy event jelölöt amit fel tudok menteni
+
+        var lightbox = document.getElementById(lightx);//a dokumentumba lekéri a light(szám, nevű objekt értéket)
+
+        lightbox.addEventListener("change", function () { //az event liszenernek ad egy szám értéket
+          socket.emit(lightx, Number(this.checked)); //amelyben elküldi az   console.log(Number(this.checked));// consol.log ba is kiírja az értéket
+        });
+      });
+
+
+      socket.on(lightx, function (data) { //megnézi a gomb statusat a kliensen
+        document.getElementById(lightx).checked = data; //ha eltér akkor átírja
+        socket.emit(lightx, data);
+      });
+    };
+
+
+    for (let i = 0; i < 7; i++) {
+      lightyvalue("light" + i); //lightx ek értékének ki olvasásáért felel (hogy mind ki olvahato legyen)
+    }
+
+
+  </script>
+</body>
+
+</html>
