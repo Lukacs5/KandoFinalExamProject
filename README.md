@@ -3,14 +3,14 @@
 
 <a href="https://docs.google.com/document/d/1IwJ712Hml84xuj7FzvEjJM3a8v8RdVCA8HzNT8qxRTU/edit#heading=h.7vttqjrfdcxd" target="_blank">Leirás</a>
 
-##Ezek a témák olvashatóak a fenti leirásban
+## Ezek a témák olvashatóak a fenti leirásban
 
-###Az okos otthon
-###Webfejlesztés
-###Mobil platform és a régi öreg bevált PC-k
-###Linux
-###Maga a program
-###Továbbfejlesztés
+### Az okos otthon
+### Webfejlesztés
+### Mobil platform és a régi öreg bevált PC-k
+### Linux
+### Maga a program
+### Továbbfejlesztés
 
 forrás:
 https://www.rentit.hu/hu-HU/Cikk/erdekessegek/a-linux-tortenete.rentit
